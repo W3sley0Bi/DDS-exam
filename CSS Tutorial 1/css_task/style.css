@@ -1,0 +1,86 @@
+body{
+    width: 1080px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#sidebar{
+    background-color: grey;
+    font-size: 0.9em;
+    padding: 10px;
+    width: 36%;
+
+}
+
+#main{
+    width: 62%;
+    padding: 10px;
+
+
+}
+
+#main-content{
+    display: flex !important;
+}
+
+input[type="text"] {
+   border-color: grey;
+   border-radius: 0.375em;
+   height: 2.5em;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   margin: 5px;
+
+  }
+
+  input[type="text"]:focus {
+    border-color: red;
+    outline: 0px;
+   }
+
+   li::marker {
+    color: red;
+    font-size: 1.5em;
+  }
+  h1,h2,h3,h4,h5,h6{
+    color: blue;
+    font-family: "Roboto Slab";
+    font-size: 50px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 1em;
+  }
+
+  img[src="images/vsr_logo.png"]{
+    float: right;
+    overflow: auto;
+  }
+  span{
+    color: red ;
+  }
+
+  span.extra{
+    color: black !important;
+  }
+
+  #sidebar > .inner{
+    padding: 2.2em 2.2em 23em 2.2em;
+  }
+
+  a:link{
+    color: blue;
+  }
+  a:visited{
+    color: red;
+  }
+  a:hover{
+    color: green;
+  }
+  a:active{
+    color: purple;
+  }
+
+  #sidebar > .inner > * {
+    border-bottom: 5px solid black;
+  }
