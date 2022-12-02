@@ -1,0 +1,76 @@
+Modul:		Design_of_Distributed_Systems
+Dozent:		Prof_Gaedke
+Semester:	WS2016-2017
+Prüfungsart:	schriftlich
+
+Prüfungsbericht:
+
+Aufgabe 1 (16 Punkte)
+
+a) CSS:
+	- alle <p> mit Klasse 'first' -> rote Schrift
+	- Id second -> Schriftgröße 20px und bold
+	- alle <img> innerhalb von <div> -> Höhe 200px
+	- h1, h2 und p -> äußerer Abstand von 10 px
+	
+b) JS (kein JQuery erlaubt)
+	- Id gegeben -> Text innerhalb des Tags ändern
+	- das zweite Element mit der Klasse 'bold' -> bei klick Funktion ausführen
+	- Array definieren
+	- falls counter größer als 5 dann Funktion xy mit counter als Argument rufen
+	- Schleife die von 1 bis 8 läuft und von der Variable 'text' das zweite Zeichen an 'text' hinten anhängt
+	
+c) JSON Objekt gegeben mit { {name : 'x', age : 24, city : 'y'}, ... } daraus soll HTML Tabelle generiert werden mithilfe von JS (JQuery erlaubt). Zeilen der Tabelle sollen abwechseln weißen/grauen Hintergrund haben.
+
+
+Aufgabe 2 (10 Punkte)
+
+a) Was ist AJAX?
+
+b) URL für ein Gästebuch gegeben, welche HTTP Methode ist sinnvoll um alle Einträge abzufragen? Warum? (Lösungsvorschlag: GET da keine Daten an den Server zu übermitteln sind, sonst POST)
+
+c) GET Request an Gästebuch URL mit JS oder JQuery realisieren
+
+d) Welcher Statuscode wird beim Request an den Server geschickt? (Lösungsvorschlag: Keine, da Statuscodes nur bei Response vom Server eingesetzt werden.)
+
+e) Unterschiede zwischen GET und POST nennen
+
+f) Welches Header Attribut spielt beim FPR eine besondere Rolle? (Lösungsvorschlag: Location)
+
+
+Aufgabe 3 (8 Punkte)
+
+a) Websocket programmieren mit JS. Der Inhalt vom Feld mit ID x soll beim Klick auf Button Y per WebSocket versendet werden. Falls eine Nachricht eintrifft (onmessage) dann soll der Inhalt in eine <ul> eingefügt werden.
+
+b) Was muss am Code geändert werden, wenn auf ein Secure Socket umgestellt werden soll? (Lösungsvorschlag: URL)
+
+c) 2 Vorteile von WebSockets im Vergleich zu AJAX.
+
+
+Aufgabe 4 (8 Punkte)
+
+a) 3 Architekturen von Verteilten Systemen nennen
+
+b) Welche Architektur wird im WWW eingesetzt?
+
+c) Was ist eine URI? Syntax beschreiben
+
+d) Wie werden Ressourcen im Web Adressiert?
+
+e) Wofür steht 404? Wo spielt das eine Rolle?
+
+f) Wie wird ein Internet Socket beschrieben?
+
+
+Aufgabe 5 (10 Punkte)
+
+a) Was sind Cookies und wofür braucht man diese?
+
+b) Diagram gegeben, Kommunikation zwischen Client und Server wobei: 
+	1) Client Anfrage sendet 
+	2) Server antwortet 
+	3) Client weitere Anfrage sendet
+	Für diese 3 Schritte HTTP angeben und einen sinnvollen Cookie einsetzen.
+	
+	
+Insgesamt eine faire Prüfung. Ich bin gut mit der Zeit zurecht gekommen und die Übungsaufgaben/Altklausuren bereiten sehr gut auf diese Prüfung vor. Mit der Punkteverteilung bin ich mir nicht sicher aber die Aufgaben sollten stimmen.

@@ -1,0 +1,49 @@
+Unterschiede zwischen "Engineering Requirements" und "Conceptual Design"
+
+
+Erklären von Programmiermodellen und Unterschiede
+	- Wasserfallmodell (hat Meilensteine, keine Risiko-Analyse)
+	- Spiralmodel (keine Meilensteine, hat Risiko-Analyse)
+
+
+Ein Unternehmen hat 2 Projekte:
+	1. Schiff bauen bis 31.12.2015
+	2. Cloud-System entwickeln bis 31.12.2015
+Frage: Für welches Projekt, welches Modell?
+Antwort:	1. Wasserfallmodell
+			2. MSF v3 (Kein Spiralmodell, weil keine Meilensteine, aber ein festes Fertigstellungsdatum)
+
+
+Use-Case Diagramm für ein Küchengeräteshop
+	Aktionen: suchen, bezahlen, ...
+
+
+Analysis Activity von "suchen" des Küchengeräteshop (boundary, entity, control)
+
+
+Product Dimensions:
+	- Content
+	- User Interface Experience
+		- Präsentation
+		- User Interaktion
+		- Navigation
+	- Distributed Web System
+	- Social and Entertainment Aspect (SEA)
+		- Social Relations
+		- Gamification Relation
+
+
+Navigation-Patterns nennen und erklären
+
+
+JQuery:
+-------
+Schreibe eine JQuery-Anweisung, welche bei einem Mousover über "beta" das "beta" rot färbt.
+Für das färben gibt es eine Klasse "red"
+
+
+<ul id="liste">
+	<li>alpha</li>
+	<li>beta</li>
+	<li>gamma</li>
+</ul>

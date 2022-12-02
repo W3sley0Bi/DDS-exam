@@ -1,0 +1,21 @@
+Aufgabe 1
+Gegeben ist ein Schachbrett aus Einer Html Tabelle, mittels Javascript und jquery soll eine einfache Figurenbewegung implementiert werden.
+Zwei Felder sind Rot markiert, der schwarz bzw weiÃŸ. Klickt man in ein Rotes Feld (&lt;td class=&quot;r&quot;&gt;) und danach in ein anderes soll das neue feld rot werden und das alte schwarz bzw weiÃŸ.
+
+teil 2:
+Erweiterung von Teil,um eine ausgabe deer zÃ¼ge. schema: ursprungsfeld, zug, zielfeld.
+
+Aufgabe 2:
+Ã„hnlich aufgabe 1, aber diesmal nutzen von GET um eine Anfrage an einen Server zu schicken. Der paramter der anfrage soll eine zahl sein Ã¼ber der die maus sich befindet. Das ergebnis der anfrage soll auf der selben seite ohne neu laden angezeigt werden.
+
+Aufgabe 3: Jeweils 3 pkt
+A) Unterschied Ms-rpc und xml-rpc
+B) unterschied html header referrer und location
+C) was sind session ids und wofÃ¼r benÃ¶tigt man sie, wie kann man sie umsetzen
+D) unterschied Cgi und SErver side scripting
+E)
+
+aufgabe 4:
+ErklÃ¤rer sie mittels eines weg/zeit diagramms das cookie protokoll 3 pkt
+
+Insgesamt 60pkt, 90min
