@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0160)https://bildungsportal.sachsen.de/opal/g/PEEK_VIEW_WRAPPER-%2D37197086728-%2D1661221591706168007-%2D102696604532461_global/02_tutorial_js_basics/homework_2.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <style>
+        * {
+            font: 14px normal Arial, sans-serif;
+            color: #000000;
+        }
+
+        table {
+            margin: 50px auto;
+        }
+
+        table,
+        td {
+            border: 1px solid #aaa;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #eeeeee;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+        }
+
+        div#Log {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            width: 120px;
+            height: 310px;
+            margin-left: 180px;
+            background-color: #eeeeee;
+            border: 1px solid #aaa;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .class3399FF{
+            background-color: #3399FF;
+        }
+        
+        .class339933{
+            background-color: #339933;
+        }
+        
+        .classCC3333{
+            background-color: #CC3233;
+        }
+        
+        .class999933{
+            background-color: #999933;
+        }
+
+    </style>
+   
+    <style>
+        undefined
+    </style>
+    <style>
+        [_nghost-nyt-c52] {
+            font-family: Open Sans, sans-serif;
+            color: #121212
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="true">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="" cz-shortcut-listen="true"
+    class="mg-theme mg-theme--dark">
+    <div id="Log"></div>
+
+    <table>
+        <tbody>
+            <tr>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+                <td onclick="setField(this)"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="4">Choose a color:</th>
+            </tr>
+            <tr>
+                <td onclick="setFillColor(&#39;#CC3333&#39;)" style="background-color: #CC3333;"></td>
+                <td onclick="setFillColor(&#39;#3399FF&#39;)" style="background-color: #3399FF;"></td>
+                <td onclick="setFillColor(&#39;#339933&#39;)" style="background-color: #339933;"></td>
+                <td onclick="setFillColor(&#39;#999933&#39;)" style="background-color: #999933;"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <manganum-sidebar
+        style="z-index: 2147483647; pointer-events: none; position: fixed; height: 100%; left: 0px; top: 0px;">
+    </manganum-sidebar>
+    <link data-assets-content="css" href="chrome-extension://jbfeongihppeenfnaofmdeikahaefljd/assets/content.css"
+        type="text/css" rel="stylesheet">
+
+
+        <script>
+            let log = document.getElementById("Log")
+                
+            let colorUsed = ["339933"];
+
+                function setFillColor(selectedColor){
+                    
+                    let p = document.createElement("p")
+                    p.innerHTML = "color Changed"
+                    let x = p.style.color = selectedColor
+                    log.append(p)
+                    let y = selectedColor.split("")
+                    y.shift()
+                    let v = y.join("")
+                    colorUsed.unshift(v)
+                    colorUsed.pop()
+                }
+
+                function setField(sq){
+                    console.log(colorUsed)
+      
+                    sq.classList.toggle( "class" + colorUsed[0]) 
+
+                     
+                    
+                }
+    
+        </script>
+
+</body>
+<app-content ng-version="14.2.0"></app-content>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
