@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0156)https://bildungsportal.sachsen.de/opal/g/PEEK_VIEW_WRAPPER-%2D37197086728-%2D1661221591706168007-%2D88562835159572_global/03_tutorial_js_dom/homework_3.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="olat-tinymce-3">
+
+
+    <style>
+        * {
+            font: 14px normal Arial, sans-serif;
+            color: #000000;
+        }
+
+        table {
+            margin: 50px auto;
+        }
+
+        table,
+        td {
+            border: 1px solid #aaa;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #eeeeee;
+            width: 80px;
+            height: 80px;
+        }
+
+        table:first-child tr td {
+            cursor: pointer;
+        }
+
+        td[colspan="4"] {
+            text-align: center;
+        }
+    </style>
+    <script>
+            //insert JavaScript code here
+    </script>
+    <style>
+        undefined
+    </style>
+    <style>
+        [_nghost-ebd-c52] {
+            font-family: Open Sans, sans-serif;
+            color: #121212
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="true">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="stylesheet" href="./homework_3_files/css2">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="" cz-shortcut-listen="true"
+    class="mg-theme mg-theme--dark">
+    <table id="mytable">
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Fill a field:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Text: <br><input type="text" id="text" value=""></td>
+                <td>Field X: <br><input type="text" id="field_x" value=""></td>
+                <td>Field Y: <br><input type="text" id="field_y" value=""></td>
+                <td>CSS: <br><input type="text" id="css" value=""></td>
+            </tr>
+            <tr>
+                <td colspan="4"><button id="mybutton">Fill</button></td>
+            </tr>
+        </tbody>
+    </table><manganum-sidebar
+        style="z-index: 2147483647; pointer-events: none; position: fixed; height: 100%; left: 0px; top: 0px;"></manganum-sidebar>
+    <link data-assets-content="css" href="chrome-extension://jbfeongihppeenfnaofmdeikahaefljd/assets/content.css"
+        type="text/css" rel="stylesheet">
+
+    <script>
+        const table = document.querySelector('#mytable');
+        const cells = table.querySelectorAll('td');
+
+        cells.forEach((cell, index) => {
+        const x = index % 4;
+        const y = Math.floor(index / 4);
+        cell.setAttribute('data-x', x);
+        cell.setAttribute('data-y', y);
+});
+
+    for (let i = 0; i < cells.length; i++) {
+            const element = cells[i];
+            element.addEventListener('click', function(){
+                element.innerHTML = ""
+                console.log(element,i);
+
+            })
+    }
+
+   let button = document.getElementById("mybutton")
+   
+
+
+   button.addEventListener("click", function(){
+    let text = document.getElementById("text").value
+   let field_x = document.getElementById("field_x").value  
+   let field_y = document.getElementById("field_y").value
+   let CSS = document.getElementById("css").value
+    
+   const cell = table.querySelector(`td[data-x="${field_x}"][data-y="${field_y}"]`);
+    cell.innerHTML = `<p style="${CSS};">${text}</p>`
+   })
+
+const cell = table.querySelector('td[data-x="3"][data-y="4"]');
+       
+console.log(cell)
+       
+    </script>
+
+</body><app-content ng-version="14.2.0"></app-content><grammarly-desktop-integration
+    data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>

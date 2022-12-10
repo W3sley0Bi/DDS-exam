@@ -26,10 +26,31 @@
             width: 80px !important;
             height: 80px !important;
             
-            
         }
 
-        td:nth-child(odd) {
+        #tr1 > td:nth-child(odd) {
+        background-color: #777;
+        } 
+        #tr3 > td:nth-child(odd) {
+        background-color: #777;
+        }
+        #tr5 > td:nth-child(odd) {
+        background-color: #777;
+        }
+        #tr7 > td:nth-child(odd) {
+        background-color: #777;
+        }
+        
+        #tr2 > td:nth-child(even) {
+        background-color: #777;
+        }
+        #tr4 > td:nth-child(even) {
+        background-color: #777;
+        }
+        #tr6 > td:nth-child(even) {
+        background-color: #777;
+        }
+        #tr8 > td:nth-child(even) {
         background-color: #777;
         }
 
@@ -41,6 +62,11 @@
            font-size: 30px;
            margin: 23.5px;
         }
+
+
+
+        
+
     </style>
  
 </head>
@@ -48,7 +74,7 @@
 <body>
     <table>
         <tbody>
-            <tr onclick="clicky()">
+            <tr id = "tr1" >
                 <td><p id='tower' class="chess">♖</p></td>
                 <td><p class="chess">♘</p></td>
                 <td><p class="chess">♗</p></td>
@@ -58,75 +84,75 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr onclick="clicky()">
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+            <tr id = "tr2" >
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+            <tr id = "tr3" >
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr >
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+            <tr id = "tr4">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr >
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+            <tr id = "tr5">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr >
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+            <tr id = "tr6">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr >
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+            <tr id = "tr7">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr >
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+            <tr id="tr8">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
 
         </tbody>
@@ -141,13 +167,25 @@
         let tr = document.querySelectorAll('tr')
         
         let td = document.querySelectorAll('td')
-        let click = []
-    
-        console.log(td)
-        for (var i = 0 ; i < td.length; i++) {
-        td[i].addEventListener('click' , clicky, false ) ;
-   
+
+        let arraytd = document.getElementsByTagName("td")
+        let chessPiece;
+        for (let i = 0; i < arraytd.length; i++) {
+            const element = arraytd[i];
+            element.addEventListener("click", function(){
+            console.log("hello")
+            console.log(i)
+            console.log(element.hasChildNodes())
+            
+            if(element.hasChildNodes()){
+                chessPiece = element.childNodes[0]
+            }
+
+        })
+            
         }
+
+        
 
     
         
