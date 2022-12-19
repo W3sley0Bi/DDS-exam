@@ -45,7 +45,6 @@ def handle_request(conn):
 
     try:
         # get  cookie
-        
         b = c.get("my_cookie")
         balance = float(b.value)
         

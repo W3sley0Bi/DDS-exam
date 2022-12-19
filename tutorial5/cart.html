@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            font: 15px normal Arial, sans-serif;
+            color: #000000;
+        }
+        label {
+            width: 5em;
+            display: inline-block;
+        }
+        ul {
+            padding: 0;
+        }
+        form {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <ul id="demo">
+
+    </ul>
+    </form>
+    <hr>
+    <img src="cart.gif">
+    <hr>
+    <form method="POST" action="/cart">
+        <label for="name">Name</label> <input id="name" type="text" name="name" placeholder="Name"><br>
+        <label for="amount">Amount</label> <input id="amount" type="number" name="amount" placeholder="Amount"><br>
+        <input type="hidden" name="action" value="add">
+        <button type="submit">Add entry</button>
+    </form>
+    <script>
+        let xhttp = new XMLHttpRequest()
+        xhttp.onload = function() {
+            let obj = JSON.parse(this.responseText)
+            console.log(obj)
+            for (let i = 0; i < obj.length; i++) {
+                const li = document.createElement("li");
+                const button = document.createElement("button");
+                button.textContent = "delete";
+                
+                li.textContent = `${obj[i].amount}X ${obj[i].name} `;
+                
+                document.getElementById("demo").append(li)
+                li.append(button)
+
+                button.addEventListener("click", function(){
+                    let xhttp1 = new XMLHttpRequest()
+                    xhttp1.onload = function(xhttp1){
+                        console.log(this.responseText)
+                        location.reload()
+                    } 
+
+                    xhttp1.open("DELETE", `/cart/${obj[i].id}`)
+                    xhttp1.send();
+                    
+                })
+                //document.getElementById("demo").innerHTML = `<li>${obj[i].amount}X ${obj[i].name}</li>`;
+                
+            }
+        
+        }
+        
+        xhttp.open("GET", "cart", true);
+        xhttp.send();
+        
+       
+    </script>
+</body>
+</html>
