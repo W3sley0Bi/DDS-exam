@@ -1,0 +1,1 @@
+I was having a major hangup while working on it. As a heads up: the card.html isn't served on the / route. It still serves the old version stored in the cart.ejs fiel

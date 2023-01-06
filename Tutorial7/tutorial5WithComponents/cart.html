@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8" />
+    
+</head>
+<body>
+    
+    <cart-tag  name="Mario" avatar="https://picsum.photos/200">  </cart-tag>
+
+<script src="./Cart.js"></script>
+
+    <!-- <script>
+
+
+        let xhttp = new XMLHttpRequest()
+        xhttp.onload = function() {
+            let obj = JSON.parse(this.responseText)
+            console.log(obj)
+            for (let i = 0; i < obj.length; i++) {
+                const li = document.createElement("li");
+                const button = document.createElement("button");
+                button.textContent = "delete";
+                
+                li.textContent = `${obj[i].amount}X ${obj[i].name} `;
+                
+                document.getElementById("demo").append(li)
+                li.append(button)
+
+                button.addEventListener("click", function(){
+                    let xhttp1 = new XMLHttpRequest()
+                    xhttp1.onload = function(xhttp1){
+                        console.log(this.responseText)
+                        location.reload()
+                    } 
+
+                    xhttp1.open("DELETE", `/cart/${obj[i].id}`)
+                    xhttp1.send();
+                    
+                })
+                //document.getElementById("demo").innerHTML = `<li>${obj[i].amount}X ${obj[i].name}</li>`;
+                
+            }
+        
+        }
+        
+        xhttp.open("GET", "cart", true);
+        xhttp.send();
+        
+       
+    </script> -->
+</body>
+</html>

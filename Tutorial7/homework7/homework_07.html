@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Shop</title>
+
+  </head>
+  <body>
+    <script>
+      // Add script for WebComponent here
+    </script>
+
+    <!--Add HTML Template here-->
+
+    <h1>Shop Products</h1>
+    <div id="grid">
+      <app-product > </app-product>
+
+      <app-product avatar="https://picsum.photos/200" >   
+        <div slot="title"> 
+          michael
+        </div>
+        <span slot="price"> 
+          03
+        </span>
+        <p slot="description"> 
+          Brif description
+        </p>
+        </app-product>
+
+        <app-product  >   
+          <div slot="title"> 
+            Toto 
+          </div>
+          <span slot="price"> 
+            34343
+          </span>
+          
+          </app-product>
+    </div>
+
+    <script src="./Product.js"></script>
+  </body>
+</html>
