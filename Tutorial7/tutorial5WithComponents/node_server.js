@@ -16,6 +16,8 @@ const cartEntries = []
 app.set('view engine', 'ejs');
 app.set('views', __dirname);
 
+app.use(express.static('tutorial5WithComponents'))
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
@@ -41,6 +43,10 @@ app.post('/', function (req, res) {
 })
 
 //////////// REST-API ////////////////
+app.get('/Cart.js', (req, res) => {
+	res.setHeader('Content-Type', 'application/javascript');
+	res.sendFile(__dirname + '/Cart.js');
+  });
 
 app.get('/ajax', async function (req, res) {
 	res.sendFile('cart.html', { root: __dirname })

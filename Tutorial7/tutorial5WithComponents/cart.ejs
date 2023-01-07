@@ -21,6 +21,7 @@
 </head>
 <body>
     <h1>Shopping Cart</h1>
+    <p>rememebr to go to localhost:3000/ajax</p>
     <ul>
         <% cartEntries.forEach(entry => { %>
         <li><%= entry.amount %>x <%= entry.name %> <form method="POST" action="/"><input type="hidden" name="id" value="<%= entry.id %>"><input type="hidden" name="action" value="delete"><button type="submit">delete</button></form></li>

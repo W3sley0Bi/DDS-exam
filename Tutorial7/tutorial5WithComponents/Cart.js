@@ -44,9 +44,13 @@ class Cart extends HTMLElement{
         this.showInfo = true;
         this.attachShadow({mode: "open"})
         this.shadowRoot.appendChild(template.content.cloneNode(true));
+        
         //this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name');
        // this.shadowRoot.querySelector('img').src = this.getAttribute('avatar');
     }
+
+    
+
     // toggleInfo(){
     //     this.showInfo = !this.showInfo
     //     const info = this.shadowRoot.querySelector('.info');
@@ -60,12 +64,51 @@ class Cart extends HTMLElement{
     //     }
 
     // }
-    // connectedCallback(){
-    //     this.shadowRoot.querySelector('button').
-    //     addEventListener('click',()=> 
-    //         this.toggleInfo()
-    //     )
-    // }
+    connectedCallback(){
+        const outer = this
+        let xhttp = new XMLHttpRequest()
+        xhttp.onload = function() {
+            let obj = JSON.parse(this.responseText)
+
+            //here we console log the output in this obj
+            console.log(obj)
+
+            for (let i = 0; i < obj.length; i++) {
+                const li = document.createElement("li");
+                
+                const button = document.createElement("button");
+                button.textContent = "delete";
+                
+                li.textContent = `${obj[i].amount}X ${obj[i].name} `;
+                li.appendChild(button)
+                console.log(li)
+                
+                outer.shadowRoot.querySelector("#demo").appendChild(li)
+
+      
+
+                button.addEventListener("click", function(){
+                    let xhttp1 = new XMLHttpRequest()
+                    xhttp1.onload = function(xhttp1){
+                        console.log(this.responseText)
+                        location.reload()
+                    } 
+
+                    xhttp1.open("DELETE", `/cart/${obj[i].id}`)
+                    xhttp1.send();
+                    
+                })
+                
+
+                //document.getElementById("demo").innerHTML = `<li>${obj[i].amount}X ${obj[i].name}</li>`;
+                
+            }
+        
+        }
+        
+        xhttp.open("GET", "cart", true);
+        xhttp.send();
+    }
     // disconnectedCallback(){
     //     this.shadowRoot.querySelector('button').
     //     removeEventListener()
