@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+    var userData = ViewData["Data"]; 
+    //.Split("&#xA;")
+
+}
+
+<div class="text-center">
+    <form action="/submitform" method="post">
+    <input  type="text" name="textBox" id="myTextBox"/>
+    <input type="submit" name="s" value = "submit" >
+    </form>
+
+<script>
+console.log(@userData)
+</script>
+
+
+ @foreach (var dataLine in (dynamic)userData)
+{
+  foreach (var dataItem in dataLine)
+  {@dataItem <text>&nbsp;</text>}
+  <br />
+} 
+  
+   
+</div>
