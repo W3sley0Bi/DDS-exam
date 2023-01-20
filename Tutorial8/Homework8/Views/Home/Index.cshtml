@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var userData = ViewData["names"];
+    
+}
+
+<form action="/submitform" method="get">
+  <input type="text" name="textInput"/>
+  <input type="submit"  value="submit">
+</form>
+
+<form action="/" method="post">
+  <input type="submit" value="reset"/>
+</form>
+
+
+<div class="text-center">
+        @*
+        here i'm displaying al the data from name
+          *@
+          
+          @foreach (var dataLine in (dynamic)userData)
+{
+  foreach (var dataItem in dataLine)
+  {@dataItem <text>&nbsp;</text>}
+  <br />
+} 
+</div>
